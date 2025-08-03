@@ -18,3 +18,10 @@ class Note(SQLModel, table=True):
     id: int = Field(default=None, primary_key=True)
     title: str = Field(default="Untitled")
     content: Optional[str] = Field(default="")
+
+
+class User(SQLModel, table=True):
+    id: int = Field(default=None, primary_key=True)
+    name: str = Field(default="")
+    address: str = Field(default="")
+    age: int = Field(default=None)
